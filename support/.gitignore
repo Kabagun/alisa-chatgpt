@@ -1,0 +1,12 @@
+temp/
+**/temp/
+**/build/
+**/dist/
+**/__pycache__/
+*.pyc
+*.dpapi
+*.local.json
+*.local.sh
+lite-kit/
+downloads/
+tools/

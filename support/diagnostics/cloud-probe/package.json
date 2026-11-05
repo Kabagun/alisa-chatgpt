@@ -1,0 +1,10 @@
+{
+  "name": "alisa-voice-tool-probe",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-probe.mjs",
+    "validate": "node scripts/validate-artifact.mjs",
+    "test": "node --test tests/*.test.mjs"
+  }
+}

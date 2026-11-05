@@ -1,0 +1,65 @@
+# Offline preparation only: no model has been trained with this configuration.
+# Intended for the inspected interkelstar/microwakeword-trainer source.
+# Run only inside a task-local Python environment after pinning dependencies/data.
+model_name: ru_kolya
+wake_word: "Коля"
+author: local
+trained_languages: ["ru"]
+version: 1
+train_with_recordings: false
+target_phrases:
+  - "Коля"
+  - "Коля!"
+  - "Коля?"
+training:
+  n_samples: 50000
+  n_samples_val: 10000
+voices:
+  primary:
+    base_url: https://huggingface.co/rhasspy/piper-voices/resolve/main/ru/ru_RU
+    models:
+      ru_RU-dmitri-medium: dmitri/medium
+      ru_RU-denis-medium: denis/medium
+negative_phrases:
+  - "Алиса"
+  - "Яндекс"
+  - "Оля"
+  - "Поля"
+  - "поля"
+  - "воля"
+  - "доля"
+  - "колья"
+  - "Коле"
+  - "Коли"
+  - "коли"
+  - "Коляда"
+  - "коляска"
+  - "школа"
+  - "колбаса"
+  - "сколько"
+  - "Николай"
+  - "Николя"
+  - "прикольно"
+  - "привет"
+  - "стоп"
+  - "пожалуйста"
+microwakeword:
+  architecture: mixednet
+  pointwise_filters: "64,64,64,64"
+  repeat_in_block: "1,1,1,1"
+  mixconv_kernel_sizes: "[5], [7,11], [9,15], [23]"
+  first_conv_filters: 32
+  first_conv_kernel_size: 5
+  stride: 3
+  spectrogram_length: 204
+  training_steps: 10000
+  batch_size: 128
+  learning_rate: 0.001
+  positive_class_weight: 1.5
+  negative_class_weight: 1
+  time_mask_max_size: 5
+  time_mask_count: 2
+  freq_mask_max_size: 5
+  freq_mask_count: 2
+  probability_cutoff: 0.9
+  sliding_window_size: 10

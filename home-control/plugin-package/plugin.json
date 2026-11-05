@@ -1,0 +1,18 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "home-control",
+  "version": "0.1.0",
+  "description": "Подключение домашней техники к ChatGPT. Первая интеграция — Dreamehome: устройства, состояние и доступные данные комнат. Уборка выбранных комнат пока не включена.",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Умный дом",
+        "shortDescription": "Устройства и комнаты Dreame",
+        "longDescription": "Личный мост к домашней технике на собственном сервере. Подключает аккаунт Dreamehome и предоставляет ChatGPT сведения об устройствах, их состоянии и доступных комнатах. Уборка выбранных комнат пока не включена: требуется проверить карту и поддержку конкретного пылесоса.",
+        "category": "Productivity",
+        "capabilities": [],
+        "defaultPrompt": "Покажи устройства из моего подключённого аккаунта Dreamehome."
+      }
+    }
+  }
+}

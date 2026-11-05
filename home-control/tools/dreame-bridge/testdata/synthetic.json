@@ -1,0 +1,74 @@
+{
+  "schema": 1,
+  "synthetic": true,
+  "observed_at": "2026-01-01T00:00:00Z",
+  "devices": {
+    "code": 0,
+    "data": {
+      "page": {
+        "records": [
+          {
+            "did": "fixture-vacuum-1",
+            "model": "dreame.vacuum.synthetic",
+            "customName": "Example robot"
+          }
+        ]
+      }
+    }
+  },
+  "status": {
+    "fixture-vacuum-1": {
+      "code": 0,
+      "data": {
+        "result": [
+          {
+            "siid": 2,
+            "piid": 1,
+            "code": 0,
+            "value": 6
+          },
+          {
+            "siid": 2,
+            "piid": 2,
+            "code": 0,
+            "value": 0
+          },
+          {
+            "siid": 3,
+            "piid": 1,
+            "code": 0,
+            "value": 82
+          },
+          {
+            "siid": 3,
+            "piid": 2,
+            "code": 0,
+            "value": 1
+          },
+          {
+            "siid": 4,
+            "piid": 1,
+            "code": 0,
+            "value": 0
+          },
+          {
+            "siid": 4,
+            "piid": 7,
+            "code": 0,
+            "value": 0
+          }
+        ]
+      }
+    }
+  },
+  "maps": {
+    "fixture-vacuum-1": [
+      {
+        "map_id": 42,
+        "version": 1,
+        "active": true,
+        "encoded_map": "eJzTYmBg8GRAAUxACALMzOzs1UrFqenxmXlpSlbVSsYgoqSyIFXJykRHqSg/P9fTRclKKS2zoqS0KFU3O7MkOSM1T0lHKS8xF6hGycCrKCjd0t3NwMc4KKvSMd/ARz8o3c/ZxMCnKrAkxd3RO9DWVqlWR8kcYa4hFnNzMssy89KVamtrAeYVLfc="
+      }
+    ]
+  }
+}

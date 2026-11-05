@@ -1,0 +1,22 @@
+temp/
+build/
+dist/
+bin/
+public-config.json
+vendor-profile.json
+.env*
+*.key
+*.pem
+*.sqlite*
+*.db
+
+# Local runtime and deployment material (examples are tracked explicitly).
+state/
+data/
+runtime/
+logs/
+*.log
+session*.json
+**/session*.json
+/public-profile.json
+/BUILD-MANIFEST.json

@@ -1,0 +1,72 @@
+[
+  {
+    "params": {},
+    "canonical": "",
+    "signed": {
+      "sign": "87cc479f57ebce39987d93da86a28161",
+      "timestamp": 1700000000123
+    }
+  },
+  {
+    "params": {
+      "uid": "fixture-owner",
+      "did": "fixture-vacuum-1",
+      "from": 1687019188,
+      "limit": 20,
+      "siid": "6",
+      "piid": "1",
+      "region": "eu",
+      "type": 3
+    },
+    "canonical": "did=fixture-vacuum-1&from=1687019188&limit=20&piid=1&region=eu&siid=6&type=3&uid=fixture-owner",
+    "signed": {
+      "uid": "fixture-owner",
+      "did": "fixture-vacuum-1",
+      "from": 1687019188,
+      "limit": 20,
+      "siid": "6",
+      "piid": "1",
+      "region": "eu",
+      "type": 3,
+      "sign": "03ebc7a8e7b002f79ce3f150e475524b",
+      "timestamp": 1700000000123
+    }
+  },
+  {
+    "params": {
+      "did": "fixture-vacuum-1",
+      "id": 7,
+      "data": {
+        "did": "fixture-vacuum-1",
+        "id": 7,
+        "method": "get_properties",
+        "params": [
+          {
+            "did": "0",
+            "siid": 2,
+            "piid": 1
+          }
+        ]
+      }
+    },
+    "canonical": "data=[did=\"fixture-vacuum-1\"&id=7&method=\"get_properties\"]&did=fixture-vacuum-1&id=7",
+    "signed": {
+      "did": "fixture-vacuum-1",
+      "id": 7,
+      "data": {
+        "did": "fixture-vacuum-1",
+        "id": 7,
+        "method": "get_properties",
+        "params": [
+          {
+            "did": "0",
+            "siid": 2,
+            "piid": 1
+          }
+        ]
+      },
+      "sign": "d7c1886ff8d28126db1ea99146ea7b8d",
+      "timestamp": 1700000000123
+    }
+  }
+]

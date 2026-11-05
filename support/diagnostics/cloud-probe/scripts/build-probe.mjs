@@ -1,0 +1,11 @@
+import { copyFile, mkdir } from "node:fs/promises";
+import { resolve, dirname } from "node:path";
+import { fileURLToPath } from "node:url";
+const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+const out = resolve(root, "dist");
+if (dirname(out) !== root || out === root) throw new Error("Unsafe output path");
+await mkdir(resolve(out, "server"), { recursive: true });
+await mkdir(resolve(out, ".openai"), { recursive: true });
+await copyFile(resolve(root, "worker/index.js"), resolve(out, "server/index.js"));
+await copyFile(resolve(root, ".openai/hosting.json"), resolve(out, ".openai/hosting.json"));
+console.log("Built MCP probe artifact.");

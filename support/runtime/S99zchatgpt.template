@@ -1,0 +1,156 @@
+#!/bin/sh
+# Minimal init dispatcher for the ChatGPT Voice supervisor.
+
+SUPERVISOR_DIR='/data/opt/alisa-chatgpt'
+SUPERVISOR="$SUPERVISOR_DIR/supervisor.sh"
+SAFE_PATH='/sbin:/bin:/usr/sbin:/usr/bin'
+PATH=$SAFE_PATH
+export PATH
+
+action=${1:-}
+
+usage() {
+    printf '%s\n' 'Usage: S99zchatgpt {start|stop|restart|status}' >&2
+}
+
+root_owned_dir() {
+    [ ! -L "$1" ] && [ -d "$1" ] || return 1
+    ls -ldn "$1" 2>/dev/null | awk '
+        NR == 1 { ok = substr($1, 1, 1) == "d" && $3 == 0 && substr($1, 6, 1) != "w" && substr($1, 9, 1) != "w" }
+        END { exit !ok }
+    '
+}
+
+root_owned_link() {
+    [ -L "$1" ] || return 1
+    ls -ldn "$1" 2>/dev/null | awk '
+        NR == 1 { ok = substr($1, 1, 1) == "l" && $3 == 0 }
+        END { exit !ok }
+    '
+}
+
+private_path() {
+    [ ! -L "$1" ] || return 1
+    if [ "$2" = d ]; then
+        [ -d "$1" ] || return 1
+    else
+        [ -f "$1" ] || return 1
+    fi
+    ls -ldn "$1" 2>/dev/null | awk -v kind="$2" '
+        NR == 1 { ok = substr($1, 1, 1) == kind && $3 == 0 && substr($1, 5, 6) == "------" }
+        END { exit !ok }
+    '
+}
+
+check_data_root() {
+    for required_tool in awk ls; do
+        if ! command -v "$required_tool" >/dev/null 2>&1; then
+            printf '%s\n' "S99zchatgpt: required tool is missing: $required_tool" >&2
+            return 1
+        fi
+    done
+
+    if [ -L /data ]; then
+        if ! root_owned_link /data; then
+            printf '%s\n' 'S99zchatgpt: refusing non-root-owned /data symlink' >&2
+            return 1
+        fi
+        if ! command -v readlink >/dev/null 2>&1; then
+            printf '%s\n' 'S99zchatgpt: readlink is required to validate /data' >&2
+            return 1
+        fi
+        data_target=$(readlink /data 2>/dev/null) || {
+            printf '%s\n' 'S99zchatgpt: cannot read /data symlink target' >&2
+            return 1
+        }
+        if [ "$data_target" != /bkupgrade/data ]; then
+            printf '%s\n' 'S99zchatgpt: refusing unexpected /data symlink target' >&2
+            return 1
+        fi
+        if ! root_owned_dir /bkupgrade; then
+            printf '%s\n' 'S99zchatgpt: /bkupgrade must be a real root-owned directory' >&2
+            return 1
+        fi
+        if ! root_owned_dir /bkupgrade/data; then
+            printf '%s\n' 'S99zchatgpt: /bkupgrade/data must be a real root-owned directory' >&2
+            return 1
+        fi
+    elif ! root_owned_dir /data; then
+        printf '%s\n' 'S99zchatgpt: /data must be a real root-owned directory' >&2
+        return 1
+    fi
+    return 0
+}
+
+check_target() {
+    check_data_root || return 1
+    if ! command -v env >/dev/null 2>&1; then
+        printf '%s\n' 'S99zchatgpt: required tool is missing: env' >&2
+        return 1
+    fi
+    if ! root_owned_dir /data/opt; then
+        printf '%s\n' 'S99zchatgpt: /data/opt must be a real root-owned, non-group/world-writable directory' >&2
+        return 1
+    fi
+    if ! private_path "$SUPERVISOR_DIR" d; then
+        printf '%s\n' 'S99zchatgpt: app directory must be root-owned, private, and not a symlink' >&2
+        return 1
+    fi
+    if ! private_path "$SUPERVISOR" - || [ ! -x "$SUPERVISOR" ]; then
+        printf '%s\n' 'S99zchatgpt: supervisor must be a root-owned private executable, not a symlink' >&2
+        return 1
+    fi
+    return 0
+}
+run_clean() {
+    env -i PATH="$SAFE_PATH" "$SUPERVISOR" "$1"
+}
+
+run_start() {
+    env -i PATH="$SAFE_PATH" ALISA_ACTIVATION_COMMAND='' "$SUPERVISOR" start
+}
+
+if [ "$#" -gt 1 ]; then
+    case "$action" in
+        start) exit 2 ;;
+        *) usage; exit 2 ;;
+    esac
+fi
+
+case "$action" in
+    start)
+        # Keep init output silent; the supervisor returns after its own short PID check.
+        if ! check_target >/dev/null 2>&1; then
+            exit 1
+        fi
+        run_start >/dev/null 2>&1
+        exit $?
+        ;;
+    stop)
+        check_target || exit 1
+        run_clean stop
+        exit $?
+        ;;
+    restart)
+        check_target || exit 1
+        run_clean stop
+        result=$?
+        if [ "$result" -ne 0 ]; then
+            exit "$result"
+        fi
+        if ! check_target >/dev/null 2>&1; then
+            exit 1
+        fi
+        run_start >/dev/null 2>&1
+        exit $?
+        ;;
+    status)
+        check_target || exit 1
+        run_clean status
+        exit $?
+        ;;
+    *)
+        usage
+        exit 2
+        ;;
+esac

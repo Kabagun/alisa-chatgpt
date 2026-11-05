@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "synthetic": true,
+  "transmittable": false,
+  "upstream_commit": "f5b8472b8e2e4bb3dff7bc2a81a5fd594eca9585",
+  "binding": {
+    "device_id": "fixture-device-only",
+    "model_code": "fixture.synthetic.model",
+    "saved_map_id": 42,
+    "segment_id": 23,
+    "room_name": "Fixture room",
+    "model_mapping_verified": true,
+    "active_saved_map_verified": true,
+    "map_fingerprint": "synthetic-map-epoch"
+  },
+  "requires_real_device_map_verification": true,
+  "unsigned_rpc": {
+    "did": "fixture-device-only",
+    "id": 17,
+    "data": {
+      "did": "fixture-device-only",
+      "id": 17,
+      "method": "action",
+      "params": {
+        "did": "fixture-device-only",
+        "siid": 4,
+        "aiid": 1,
+        "in": [
+          {
+            "piid": 1,
+            "value": 18
+          },
+          {
+            "piid": 10,
+            "value": "{\"selects\":[[23,1,2,1,1]]}"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,366 @@
+[
+  {
+    "source": "created-for-portable-export",
+    "export": "support/.gitignore",
+    "modified": true,
+    "lines": 12,
+    "sha256": "a61ec4680f40541bb9b206446a6cadd6cee408749f368f5d26f3cda81744b91d"
+  },
+  {
+    "source": "created-for-portable-export",
+    "export": "support/CHECKS.md",
+    "modified": true,
+    "lines": 31,
+    "sha256": "6d096fc296d3adb25aee15e1f8b8bc986b086f28267089815b5a31a999850add"
+  },
+  {
+    "source": "created-for-portable-export",
+    "export": "support/PROVENANCE.md",
+    "modified": true,
+    "lines": 19,
+    "sha256": "531784f86f104f3c77a21e27f918f326ec28b2b1fafc9af66454919f6178880b"
+  },
+  {
+    "source": "created-for-portable-export",
+    "export": "support/README.md",
+    "modified": true,
+    "lines": 15,
+    "sha256": "790ac41daf869a9ff6cba2cfeb805e322b779abd3e6a0762bd3f55e787365533"
+  },
+  {
+    "source": "temp/native-runtime/refresh-auth/probe-web-session.ps1",
+    "export": "support/auth/probe-web-session.ps1",
+    "lines": 561,
+    "modified": false,
+    "sha256": "341b2b0d55abdbad88c64c175a1e0692cea76d7eff831505f274d6a180c01c33"
+  },
+  {
+    "source": "temp/native-runtime/bootstrap.py",
+    "export": "support/toolchain/bootstrap.py",
+    "lines": 57,
+    "modified": false,
+    "sha256": "c6b85855665b68252a3c28be3d17f6f189074f2d339b72f47f4981d7b9d9075a"
+  },
+  {
+    "source": "created-for-portable-export",
+    "export": "support/toolchain/env.example.sh",
+    "modified": true,
+    "lines": 17,
+    "sha256": "8c53f9f667631853f841e1e1ead2b3283e2621518cb024f7e3c0b1e9b40d0d08"
+  },
+  {
+    "source": "created-for-portable-export",
+    "export": "support/diagnostics/abi/build.sh",
+    "modified": true,
+    "lines": 10,
+    "sha256": "4dc13acf0714153316e973c2f1525db732ce3af5557518ffd28c7b4cb5a7c998"
+  },
+  {
+    "source": "temp/native-runtime/probe/spotter-abi.c",
+    "export": "support/diagnostics/abi/spotter-abi.c",
+    "lines": 36,
+    "modified": false,
+    "sha256": "eb4547d4dacbb67d8dac8e5da7985a0600fd4513f2b0646d2641f58d9c81c9fd"
+  },
+  {
+    "source": "created-for-portable-export",
+    "export": "support/diagnostics/cloud-probe/.openai/hosting.json",
+    "modified": true,
+    "lines": 8,
+    "sha256": "4ca67d7daf91280195ec85db6057bbda2c30409b4c2588ec6711b0ba725fda96"
+  },
+  {
+    "source": "temp/native-runtime/tool-probe/cloud-probe/README.md",
+    "export": "support/diagnostics/cloud-probe/README.md",
+    "lines": 24,
+    "modified": true,
+    "sha256": "683d71116feec7611c055d32c5209795e958b97b84a6267fcb4f514e88622e0c"
+  },
+  {
+    "source": "temp/native-runtime/tool-probe/cloud-probe/package.json",
+    "export": "support/diagnostics/cloud-probe/package.json",
+    "lines": 10,
+    "modified": true,
+    "sha256": "808d38eb789d00c04ca07ce488c9a12317ecb864ea299dadfb48e3372e874946"
+  },
+  {
+    "source": "temp/native-runtime/tool-probe/cloud-probe/scripts/build-probe.mjs",
+    "export": "support/diagnostics/cloud-probe/scripts/build-probe.mjs",
+    "lines": 11,
+    "modified": false,
+    "sha256": "b980487b39db73860180132e2647151381987fcf5606dba35c8939dcd32bd323"
+  },
+  {
+    "source": "temp/native-runtime/tool-probe/cloud-probe/scripts/validate-artifact.mjs",
+    "export": "support/diagnostics/cloud-probe/scripts/validate-artifact.mjs",
+    "lines": 25,
+    "modified": false,
+    "sha256": "39d9df53ac2461962466d5965c5f4d06f08024ceca40605952d8b753b88d41fd"
+  },
+  {
+    "source": "temp/native-runtime/tool-probe/cloud-probe/temp/background-dns.test.mjs",
+    "export": "support/diagnostics/cloud-probe/tests/background-dns.test.mjs",
+    "lines": 143,
+    "modified": false,
+    "sha256": "9c1cc930e6ce77eb0d1a24021be0f4a3de08ddc8a3d4f4b7a93b7413ce6349fc"
+  },
+  {
+    "source": "temp/native-runtime/tool-probe/cloud-probe/temp/dns.test.mjs",
+    "export": "support/diagnostics/cloud-probe/tests/dns.test.mjs",
+    "lines": 179,
+    "modified": false,
+    "sha256": "b83106e91ee0dbe71221bb13a5bfc4ba6a38be0a8ab1a3696301a14e0a81810e"
+  },
+  {
+    "source": "temp/native-runtime/tool-probe/cloud-probe/temp/probe.test.mjs",
+    "export": "support/diagnostics/cloud-probe/tests/probe.test.mjs",
+    "lines": 324,
+    "modified": false,
+    "sha256": "09cf66fa088ea612ad7a3028a8cd38e3c8a4336cf893fca642504b9baa8756f9"
+  },
+  {
+    "source": "temp/native-runtime/tool-probe/cloud-probe/worker/index.js",
+    "export": "support/diagnostics/cloud-probe/worker/index.js",
+    "lines": 349,
+    "modified": false,
+    "sha256": "6892bf653a128a5b0460d4baafc420c34da807f59cb7b4d0e116e95376fb9cc7"
+  },
+  {
+    "source": "temp/native-runtime/column-agent/core_linux.go",
+    "export": "support/diagnostics/column-agent/core_linux.go",
+    "lines": 7,
+    "modified": false,
+    "sha256": "9c69a1b56b1686a9bf9d23fc891ae3c5a526efa1571b325053cbe7d122230124"
+  },
+  {
+    "source": "temp/native-runtime/column-agent/core_other.go",
+    "export": "support/diagnostics/column-agent/core_other.go",
+    "lines": 7,
+    "modified": false,
+    "sha256": "54fb9a044652b5ca22f19dfec8c69f88d7345167a9ad27c52ea188bc176c26da"
+  },
+  {
+    "source": "temp/native-runtime/column-agent/go.mod",
+    "export": "support/diagnostics/column-agent/go.mod",
+    "lines": 3,
+    "modified": false,
+    "sha256": "bcb97ee3df1338cdc349cb26bbc171c965c0027cb434123612a3571c23761e74"
+  },
+  {
+    "source": "temp/native-runtime/column-agent/main.go",
+    "export": "support/diagnostics/column-agent/main.go",
+    "lines": 262,
+    "modified": false,
+    "sha256": "c52ebef1ffa44c5edd930fefebe178978c64a266359fa936647260174cd7eaa9"
+  },
+  {
+    "source": "temp/native-runtime/column-agent/main_test.go",
+    "export": "support/diagnostics/column-agent/main_test.go",
+    "lines": 242,
+    "modified": false,
+    "sha256": "4102a0b855a01c039cab52f4121d61fc71529a2d839fc99e1024cffbd1ad41aa"
+  },
+  {
+    "source": "created-for-portable-export",
+    "export": "support/diagnostics/kolya/build.sh",
+    "modified": true,
+    "lines": 7,
+    "sha256": "5047dc441b3d4eb901a5a528f50767de8db4c98b5612687ba91fd17cd61a1e46"
+  },
+  {
+    "source": "temp/native-runtime/kolya/model-probe.c",
+    "export": "support/diagnostics/kolya/model-probe.c",
+    "lines": 151,
+    "modified": false,
+    "sha256": "6cfa0999dd00729cba9c80e77ccd618362cae61b0623d8753ccbb9a4b63c5e36"
+  },
+  {
+    "source": "temp/native-runtime/kolya/kolya-training-config.yaml",
+    "export": "support/diagnostics/kolya/training-config.example.yaml",
+    "lines": 65,
+    "modified": false,
+    "sha256": "ed12ba89c54fc6e4f529ffc90ad24adcad2bf6cbefa642dd27d0e853ff05c860"
+  },
+  {
+    "source": "created-for-portable-export",
+    "export": "support/diagnostics/kws-offline-probe/build.sh",
+    "modified": true,
+    "lines": 12,
+    "sha256": "4108d911f5a2176be0368836b0737142688130b406c94522cc57c1fd399a14dc"
+  },
+  {
+    "source": "temp/native-runtime/kws-offline-probe/go.mod",
+    "export": "support/diagnostics/kws-offline-probe/go.mod",
+    "lines": 3,
+    "modified": false,
+    "sha256": "e5aa63948ac0e6e03b8d38c80821cff5496e330ba38a8d0dec652a8d2ce4774c"
+  },
+  {
+    "source": "temp/native-runtime/kws-offline-probe/guards.go",
+    "export": "support/diagnostics/kws-offline-probe/guards.go",
+    "lines": 106,
+    "modified": false,
+    "sha256": "4983a44244ef3259189b529c724a075b02298ac31a6bfc59e913f32cbf23466b"
+  },
+  {
+    "source": "temp/native-runtime/kws-offline-probe/main.go",
+    "export": "support/diagnostics/kws-offline-probe/main.go",
+    "lines": 190,
+    "modified": false,
+    "sha256": "c3de3a2c637a7af4256a16129dc7eaf7f08b81cd77ec695457b1ad1e71b97fc7"
+  },
+  {
+    "source": "temp/native-runtime/kws-offline-probe/native.go",
+    "export": "support/diagnostics/kws-offline-probe/native.go",
+    "lines": 132,
+    "modified": false,
+    "sha256": "c2dc35745e618533be396fe07022261b8780e3540e40f57c2fc77fd48b05f635"
+  },
+  {
+    "source": "temp/native-runtime/kws-offline-probe/probe_test.go",
+    "export": "support/diagnostics/kws-offline-probe/probe_test.go",
+    "lines": 331,
+    "modified": false,
+    "sha256": "a04cbe851a06c511621c62d3ac85712971dfc8b1c4106ad4a1fb65937e23e457"
+  },
+  {
+    "source": "temp/native-runtime/kws-offline-probe/station_native.c",
+    "export": "support/diagnostics/kws-offline-probe/station_native.c",
+    "lines": 176,
+    "modified": false,
+    "sha256": "c5e1d2b4d12dd3bee05283e6f92b01bed684b69d19b8197db5d7f3ffaa189d93"
+  },
+  {
+    "source": "temp/native-runtime/kws-offline-probe/station_native.h",
+    "export": "support/diagnostics/kws-offline-probe/station_native.h",
+    "lines": 12,
+    "modified": false,
+    "sha256": "3276cd4567366879bb255411f32262c8c994430466b5d023b75a492f6aea7718"
+  },
+  {
+    "source": "temp/native-runtime/kws-offline-probe/wave.go",
+    "export": "support/diagnostics/kws-offline-probe/wave.go",
+    "lines": 56,
+    "modified": false,
+    "sha256": "4839eeb0d46ea188d2328faaa4465fbbe6cba66dbfa1188bf0dc7704a566ac8a"
+  },
+  {
+    "source": "created-for-portable-export",
+    "export": "support/diagnostics/kws-probe/build.sh",
+    "modified": true,
+    "lines": 12,
+    "sha256": "4108d911f5a2176be0368836b0737142688130b406c94522cc57c1fd399a14dc"
+  },
+  {
+    "source": "temp/native-runtime/kws-probe/go.mod",
+    "export": "support/diagnostics/kws-probe/go.mod",
+    "lines": 8,
+    "modified": false,
+    "sha256": "4dea01d7170b8a5ac0424b750935bd59ac005d8983f6afa65d6b615c7210d4af"
+  },
+  {
+    "source": "temp/native-runtime/kws-probe/go.sum",
+    "export": "support/diagnostics/kws-probe/go.sum",
+    "lines": 56,
+    "modified": false,
+    "sha256": "e7d40a169485993dae03cf8e2f8c54227dd346792837480ed53998fe039aaa8b"
+  },
+  {
+    "source": "temp/native-runtime/kws-probe/guards.go",
+    "export": "support/diagnostics/kws-probe/guards.go",
+    "lines": 91,
+    "modified": false,
+    "sha256": "778e57af23cf1d6b582bafd1ef471bbbd3f06162b1a318243403be569eb370bc"
+  },
+  {
+    "source": "temp/native-runtime/kws-probe/ipc.go",
+    "export": "support/diagnostics/kws-probe/ipc.go",
+    "lines": 152,
+    "modified": false,
+    "sha256": "50a41fb11d26e045924c8c1982f184c8ce196f44403b2d8fd552f937ba5e2e9c"
+  },
+  {
+    "source": "temp/native-runtime/kws-probe/main.go",
+    "export": "support/diagnostics/kws-probe/main.go",
+    "lines": 231,
+    "modified": false,
+    "sha256": "b0f0c4bf2f6c62ab31af98a36d85e110e9a798ab6b112714f8b02767ee32b997"
+  },
+  {
+    "source": "temp/native-runtime/kws-probe/native.go",
+    "export": "support/diagnostics/kws-probe/native.go",
+    "lines": 132,
+    "modified": false,
+    "sha256": "c2dc35745e618533be396fe07022261b8780e3540e40f57c2fc77fd48b05f635"
+  },
+  {
+    "source": "temp/native-runtime/kws-probe/probe_test.go",
+    "export": "support/diagnostics/kws-probe/probe_test.go",
+    "lines": 199,
+    "modified": false,
+    "sha256": "0f76ae8d5b2ad7b6f22168198703805778fd6c654ca0d5ebdcf4cfb05cd9ef7e"
+  },
+  {
+    "source": "temp/native-runtime/kws-probe/station_native.c",
+    "export": "support/diagnostics/kws-probe/station_native.c",
+    "lines": 176,
+    "modified": false,
+    "sha256": "c5e1d2b4d12dd3bee05283e6f92b01bed684b69d19b8197db5d7f3ffaa189d93"
+  },
+  {
+    "source": "temp/native-runtime/kws-probe/station_native.h",
+    "export": "support/diagnostics/kws-probe/station_native.h",
+    "lines": 12,
+    "modified": false,
+    "sha256": "3276cd4567366879bb255411f32262c8c994430466b5d023b75a492f6aea7718"
+  },
+  {
+    "source": "created-for-portable-export",
+    "export": "support/provisioning/README.md",
+    "modified": true,
+    "lines": 15,
+    "sha256": "1d313b8d5d60edc5fdac8e95d691f482563e091609a3b62d3737b1d3704c45a7"
+  },
+  {
+    "source": "created-for-portable-export",
+    "export": "support/provisioning/root-config.example.json",
+    "modified": true,
+    "lines": 12,
+    "sha256": "cf1957a30c7db336b907de8a995c6f902cce945455e060fa09764322c1fac78a"
+  },
+  {
+    "source": "temp/scoped-root-server.py",
+    "export": "support/provisioning/scoped-root-server.py",
+    "lines": 500,
+    "modified": true,
+    "sha256": "b31fd92e944b3518cd4ea50d828b5b3ef369fb529040c728a5b0fd4cc4577a76"
+  },
+  {
+    "source": "temp/test-scoped-root-server.py",
+    "export": "support/provisioning/test-scoped-root-server.py",
+    "lines": 273,
+    "modified": true,
+    "sha256": "fbd41653af9057b6d34d863fd612988e4193797631b46d2874197fdd0bb17dca"
+  },
+  {
+    "source": "temp/native-runtime/S99zchatgpt.template",
+    "export": "support/runtime/S99zchatgpt.template",
+    "lines": 156,
+    "modified": true,
+    "sha256": "8556b54d425aac79ba858f0b4c6252585afb1f7cd51d0713a0bc6eba79b2c707"
+  },
+  {
+    "source": "temp/native-runtime/supervisor-template.sh",
+    "export": "support/runtime/supervisor-template.sh",
+    "lines": 285,
+    "modified": false,
+    "sha256": "759057e73e10a4ad582cf24350d43dfb0647f4cfe8430f3361ae31931c0f7e53"
+  },
+  {
+    "source": "temp/native-runtime/runtime-mode/test_supervisor_modes.py",
+    "export": "support/runtime/tests/test_supervisor_modes.py",
+    "lines": 264,
+    "modified": false,
+    "sha256": "551bbdc25f4ab1281e56eae0b158a861d79dd7cacccae4f9b780416640bb3d42"
+  }
+]

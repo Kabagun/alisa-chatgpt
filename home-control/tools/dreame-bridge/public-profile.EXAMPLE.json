@@ -1,0 +1,12 @@
+{
+  "upstream_commit": "f5b8472b8e2e4bb3dff7bc2a81a5fd594eca9585",
+  "signing_key": "OPERATOR_SUPPLIED",
+  "basic_authorization": "OPERATOR_SUPPLIED_BASE64",
+  "user_agent": "OPERATOR_SUPPLIED",
+  "app_version": "OPERATOR_SUPPLIED_DIGITS",
+  "password_salt": "OPERATOR_SUPPLIED",
+  "default_tenant": "OPERATOR_SUPPLIED",
+  "map_storage_hosts": [],
+  "map_model_ivs": {},
+  "map_model_versions": {}
+}
